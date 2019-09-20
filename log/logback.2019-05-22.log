@@ -1,0 +1,1112 @@
+09:09:07.422 logback [main] INFO  com.bysj.auto.AutoApplication - Starting AutoApplication on Lenovo-PC with PID 6668 (E:\lixiaoyi\lxy\lxy\target\classes started by Lenovo in E:\lixiaoyi\lxy\lxy)
+09:09:07.452 logback [main] INFO  com.bysj.auto.AutoApplication - No active profile set, falling back to default profiles: default
+09:09:13.370 logback [main] ERROR o.a.c.core.AprLifecycleListener - An incompatible version [1.2.7] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+09:09:13.790 logback [main] ERROR o.a.c.core.AprLifecycleListener - An incompatible version [1.2.7] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+09:09:14.238 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9262 (http)
+09:09:14.256 logback [main] ERROR o.a.c.core.AprLifecycleListener - An incompatible version [1.2.7] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+09:09:14.256 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9262"]
+09:09:14.305 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+09:09:14.305 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+09:09:14.715 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+09:09:14.715 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 7090 ms
+09:09:16.113 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9262"]
+09:09:16.149 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9262 (http) with context path ''
+09:09:16.154 logback [main] INFO  com.bysj.auto.AutoApplication - Started AutoApplication in 10.72 seconds (JVM running for 15.425)
+09:15:30.157 logback [http-nio-9262-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+09:15:30.158 logback [http-nio-9262-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+09:15:30.173 logback [http-nio-9262-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+09:15:30.252 logback [http-nio-9262-exec-1] WARN  c.b.a.i.UserContextInterceptor - 请求 token 验证失败 已被拦截访问！
+09:15:42.409 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.LoginController - >>>===============================================
+09:15:42.409 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.LoginController - METHOD : login
+09:15:42.418 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+09:15:42.419 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+09:15:42.538 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.LoginController - Params : {}
+09:15:42.678 logback [http-nio-9262-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+09:15:44.138 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - >>>===============================================
+09:15:44.138 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - METHOD : login
+09:15:44.139 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+09:15:44.140 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+09:15:44.141 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - Params : {}
+09:15:45.482 logback [http-nio-9262-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+09:15:45.496 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+09:15:45.511 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+09:15:45.525 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: adminadmin(String)
+09:15:45.525 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: adminadmin(String)
+09:15:45.758 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+09:15:45.758 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+09:15:45.777 logback [http-nio-9262-exec-5] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+09:15:45.777 logback [http-nio-9262-exec-4] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+09:15:45.777 logback [http-nio-9262-exec-5] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 08:15:45(String), 7(Integer)
+09:15:45.777 logback [http-nio-9262-exec-4] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 08:15:45(String), 7(Integer)
+09:15:45.817 logback [http-nio-9262-exec-4] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+09:15:45.817 logback [http-nio-9262-exec-5] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+09:15:45.824 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==>  Preparing: insert into login(userId,fail) values(?,?) 
+09:15:45.824 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==>  Preparing: insert into login(userId,fail) values(?,?) 
+09:15:45.825 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==> Parameters: 7(Integer), 0(Integer)
+09:15:45.825 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==> Parameters: 7(Integer), 0(Integer)
+09:15:45.995 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.LoginMapper.insert - <==    Updates: 1
+09:15:46.019 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.LoginMapper.insert - <==    Updates: 1
+09:15:46.150 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.LoginController - response : {"code":2000,"data":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4NjE3MzQ2fQ.nyELmBibNgSakdldnvckciJYgcgeO4bJJ0A1_FwZfW4","message":"成功"}
+09:15:46.150 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - response : {"code":2000,"data":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4NjE3MzQ1fQ.cllMf4Ykv-pvj4YcXAJTDraPzdkGm6R5h4N2lyZPEFY","message":"成功"}
+09:15:46.150 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.LoginController - <<<===============================================
+09:15:46.150 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - <<<===============================================
+09:15:46.207 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userId = ?) 
+09:15:46.207 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userId = ?) 
+09:15:46.208 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: 7(Integer)
+09:15:46.208 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: 7(Integer)
+09:15:46.210 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+09:15:46.217 logback [http-nio-9262-exec-7] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+09:15:46.217 logback [http-nio-9262-exec-7] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+09:15:46.217 logback [http-nio-9262-exec-7] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+09:15:46.217 logback [http-nio-9262-exec-7] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+09:15:46.217 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+09:15:46.219 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+09:15:46.219 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+09:15:46.219 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+09:15:46.219 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+09:15:46.219 logback [http-nio-9262-exec-7] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4NjE3MzQ2fQ.nyELmBibNgSakdldnvckciJYgcgeO4bJJ0A1_FwZfW4"]}
+09:15:46.219 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4NjE3MzQ1fQ.cllMf4Ykv-pvj4YcXAJTDraPzdkGm6R5h4N2lyZPEFY"]}
+09:15:46.228 logback [http-nio-9262-exec-7] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-21 23:18:46","email":"1163634611@qq.com","password":"adminadmin","phone":"15858129262","roleId":1,"roleName":"saler","userId":7,"userName":"adminadmin"},"message":"成功"}
+09:15:46.228 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-21 23:18:46","email":"1163634611@qq.com","password":"adminadmin","phone":"15858129262","roleId":1,"roleName":"saler","userId":7,"userName":"adminadmin"},"message":"成功"}
+09:15:46.228 logback [http-nio-9262-exec-7] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+09:15:46.228 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+09:15:57.394 logback [http-nio-9262-exec-1] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM plan 
+09:15:57.394 logback [http-nio-9262-exec-1] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==> Parameters: 
+09:15:57.400 logback [http-nio-9262-exec-1] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - <==      Total: 1
+09:15:57.404 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.PlanMapper.select - ==>  Preparing: select id , name ,merchants from plan LIMIT ? 
+09:15:57.405 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.PlanMapper.select - ==> Parameters: 10(Integer)
+09:15:57.407 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.PlanMapper.select - <==      Total: 3
+09:15:57.437 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+09:15:57.437 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 1(Integer)
+09:15:57.527 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 5
+09:15:57.528 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+09:15:57.528 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+09:15:57.530 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 3
+09:15:57.531 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+09:15:57.531 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+09:15:57.533 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+09:18:05.076 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr 
+09:18:05.076 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 
+09:18:05.086 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 17
+09:21:57.423 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+09:21:57.423 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+09:21:57.446 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 0
+09:22:00.950 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr 
+09:22:00.951 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 
+09:22:00.956 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 17
+09:22:04.541 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr WHERE (id=?) 
+09:22:04.542 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 18(Integer)
+09:22:04.545 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 1
+09:22:06.297 logback [http-nio-9262-exec-4] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==>  Preparing: select id,userId,productId,num from cart where userId = ? AND productId = ? 
+09:22:06.298 logback [http-nio-9262-exec-4] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==> Parameters: 7(Integer), 18(Integer)
+09:22:06.309 logback [http-nio-9262-exec-4] DEBUG c.b.a.d.C.selectByUserIdAndProductId - <==      Total: 0
+09:22:06.316 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.CartMapper.insert - ==>  Preparing: INSERT INTO cart (userId,productId,num) VALUES (?,?,?) 
+09:22:06.317 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.CartMapper.insert - ==> Parameters: 7(Integer), 18(Integer), 1(Integer)
+09:22:06.442 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.CartMapper.insert - <==    Updates: 1
+09:22:43.103 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr 
+09:22:43.103 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 
+09:22:43.108 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 17
+09:22:47.076 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr WHERE (id=?) 
+09:22:47.177 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 14(Integer)
+09:22:47.179 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 1
+09:22:48.579 logback [http-nio-9262-exec-2] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==>  Preparing: select id,userId,productId,num from cart where userId = ? AND productId = ? 
+09:22:48.579 logback [http-nio-9262-exec-2] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==> Parameters: 7(Integer), 14(Integer)
+09:22:48.580 logback [http-nio-9262-exec-2] DEBUG c.b.a.d.C.selectByUserIdAndProductId - <==      Total: 0
+09:22:48.581 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.insert - ==>  Preparing: INSERT INTO cart (userId,productId,num) VALUES (?,?,?) 
+09:22:48.581 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.insert - ==> Parameters: 7(Integer), 14(Integer), 1(Integer)
+09:22:48.763 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.insert - <==    Updates: 1
+09:22:55.574 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+09:22:55.575 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+09:22:55.577 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 2
+09:22:57.184 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr 
+09:22:57.184 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 
+09:22:57.190 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 17
+09:23:02.650 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr WHERE (id=?) 
+09:23:02.650 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 15(Integer)
+09:23:02.652 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 1
+09:23:03.979 logback [http-nio-9262-exec-9] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==>  Preparing: select id,userId,productId,num from cart where userId = ? AND productId = ? 
+09:23:03.979 logback [http-nio-9262-exec-9] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==> Parameters: 7(Integer), 15(Integer)
+09:23:03.980 logback [http-nio-9262-exec-9] DEBUG c.b.a.d.C.selectByUserIdAndProductId - <==      Total: 0
+09:23:03.980 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.insert - ==>  Preparing: INSERT INTO cart (userId,productId,num) VALUES (?,?,?) 
+09:23:03.981 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.insert - ==> Parameters: 7(Integer), 15(Integer), 1(Integer)
+09:23:04.133 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.insert - <==    Updates: 1
+09:23:06.477 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr 
+09:23:06.477 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 
+09:23:06.481 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 17
+09:23:11.571 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr WHERE (id=?) 
+09:23:11.571 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 13(Integer)
+09:23:11.573 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 1
+09:23:13.192 logback [http-nio-9262-exec-4] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==>  Preparing: select id,userId,productId,num from cart where userId = ? AND productId = ? 
+09:23:13.192 logback [http-nio-9262-exec-4] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==> Parameters: 7(Integer), 13(Integer)
+09:23:13.193 logback [http-nio-9262-exec-4] DEBUG c.b.a.d.C.selectByUserIdAndProductId - <==      Total: 0
+09:23:13.193 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.CartMapper.insert - ==>  Preparing: INSERT INTO cart (userId,productId,num) VALUES (?,?,?) 
+09:23:13.194 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.CartMapper.insert - ==> Parameters: 7(Integer), 13(Integer), 1(Integer)
+09:23:13.414 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.CartMapper.insert - <==    Updates: 1
+09:23:18.726 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+09:23:18.726 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+09:23:18.728 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 4
+09:25:56.681 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - >>>===============================================
+09:25:56.681 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - METHOD : login
+09:25:56.681 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+09:25:56.681 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+09:25:56.682 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - Params : {}
+09:25:56.684 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+09:25:56.685 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: lixiaoyi(String)
+09:25:56.690 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+09:25:56.691 logback [http-nio-9262-exec-2] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+09:25:56.692 logback [http-nio-9262-exec-2] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 08:25:56(String), 50(Integer)
+09:25:57.006 logback [http-nio-9262-exec-2] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+09:25:57.022 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==>  Preparing: insert into login(userId,fail) values(?,?) 
+09:25:57.023 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==> Parameters: 50(Integer), 1(Integer)
+09:25:57.252 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.LoginMapper.insert - <==    Updates: 1
+09:25:57.252 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - response : {"code":4002,"data":2,"message":"登陆失败，密码错误"}
+09:25:57.252 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - <<<===============================================
+09:25:58.285 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - >>>===============================================
+09:25:58.285 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - METHOD : login
+09:25:58.285 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+09:25:58.285 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+09:25:58.285 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - Params : {}
+09:25:58.286 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+09:25:58.286 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: lixiaoyi(String)
+09:25:58.288 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+09:25:58.288 logback [http-nio-9262-exec-1] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+09:25:58.289 logback [http-nio-9262-exec-1] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 08:25:58(String), 50(Integer)
+09:25:58.290 logback [http-nio-9262-exec-1] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+09:25:58.291 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==>  Preparing: insert into login(userId,fail) values(?,?) 
+09:25:58.293 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==> Parameters: 50(Integer), 1(Integer)
+09:25:58.480 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.LoginMapper.insert - <==    Updates: 1
+09:25:58.480 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - response : {"code":4002,"data":1,"message":"登陆失败，密码错误"}
+09:25:58.480 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - <<<===============================================
+09:25:58.971 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - >>>===============================================
+09:25:58.971 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - METHOD : login
+09:25:58.971 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+09:25:58.971 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+09:25:58.971 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - Params : {}
+09:25:58.973 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+09:25:58.973 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: lixiaoyi(String)
+09:25:58.975 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+09:25:58.976 logback [http-nio-9262-exec-5] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+09:25:58.977 logback [http-nio-9262-exec-5] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 08:25:58(String), 50(Integer)
+09:25:58.979 logback [http-nio-9262-exec-5] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+09:25:58.980 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==>  Preparing: insert into login(userId,fail) values(?,?) 
+09:25:58.980 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==> Parameters: 50(Integer), 1(Integer)
+09:25:59.123 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.LoginMapper.insert - <==    Updates: 1
+09:25:59.124 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - response : {"code":4002,"data":0,"message":"登陆失败，密码错误"}
+09:25:59.124 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - <<<===============================================
+09:25:59.749 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.LoginController - >>>===============================================
+09:25:59.749 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.LoginController - METHOD : login
+09:25:59.749 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+09:25:59.749 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+09:25:59.750 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.LoginController - Params : {}
+09:25:59.750 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+09:25:59.751 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: lixiaoyi(String)
+09:25:59.752 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+09:25:59.753 logback [http-nio-9262-exec-3] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+09:25:59.753 logback [http-nio-9262-exec-3] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 08:25:59(String), 50(Integer)
+09:25:59.756 logback [http-nio-9262-exec-3] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+09:25:59.757 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.LoginController - response : {"code":4003,"message":"登陆失败，尝试次数超出限制"}
+09:25:59.757 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.LoginController - <<<===============================================
+09:27:47.555 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.LoginController - >>>===============================================
+09:27:47.555 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.LoginController - METHOD : login
+09:27:47.555 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+09:27:47.556 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+09:27:47.556 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.LoginController - Params : {}
+09:27:47.557 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+09:27:47.557 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: adminadmin(String)
+09:27:47.559 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+09:27:47.560 logback [http-nio-9262-exec-6] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+09:27:47.560 logback [http-nio-9262-exec-6] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 08:27:47(String), 7(Integer)
+09:27:47.561 logback [http-nio-9262-exec-6] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+09:27:47.562 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==>  Preparing: insert into login(userId,fail) values(?,?) 
+09:27:47.562 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==> Parameters: 7(Integer), 0(Integer)
+09:27:47.776 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.LoginMapper.insert - <==    Updates: 1
+09:27:47.778 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.LoginController - response : {"code":2000,"data":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4NjE4MDY3fQ.llFx74AZo0JscWmJgTUC8UHU98qxh5_Owt8Ov7gkNPM","message":"成功"}
+09:27:47.778 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.LoginController - <<<===============================================
+09:27:47.801 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userId = ?) 
+09:27:47.801 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: 7(Integer)
+09:27:47.803 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+09:27:47.804 logback [http-nio-9262-exec-8] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+09:27:47.805 logback [http-nio-9262-exec-8] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+09:27:47.805 logback [http-nio-9262-exec-8] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+09:27:47.805 logback [http-nio-9262-exec-8] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+09:27:47.805 logback [http-nio-9262-exec-8] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4NjE4MDY3fQ.llFx74AZo0JscWmJgTUC8UHU98qxh5_Owt8Ov7gkNPM"]}
+09:27:47.805 logback [http-nio-9262-exec-8] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-21 23:18:46","email":"1163634611@qq.com","password":"adminadmin","phone":"15858129262","roleId":1,"roleName":"saler","userId":7,"userName":"adminadmin"},"message":"成功"}
+09:27:47.805 logback [http-nio-9262-exec-8] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+09:27:52.217 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+09:27:52.218 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+09:27:52.220 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 4
+09:27:52.829 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr WHERE (id=?) 
+09:27:52.829 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 15(Integer)
+09:27:52.831 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 1
+09:27:56.196 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.RecordMapper.select - ==>  Preparing: select re.id,re.userId,re.productId,re.num,re.createTime,pr.name as productName from record re join product pr on pr.id = re.productId where userId = ? 
+09:27:56.197 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.RecordMapper.select - ==> Parameters: 7(Integer)
+09:27:56.303 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.RecordMapper.select - <==      Total: 11
+09:27:57.692 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+09:27:57.692 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+09:27:57.696 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 4
+09:28:01.973 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.CartMapper.delete - ==>  Preparing: DELETE FROM `auto`.`cart` WHERE `id` = ? 
+09:28:01.974 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.CartMapper.delete - ==> Parameters: 34(Integer)
+09:28:02.156 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.CartMapper.delete - <==    Updates: 1
+09:28:02.691 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.CartMapper.delete - ==>  Preparing: DELETE FROM `auto`.`cart` WHERE `id` = ? 
+09:28:02.691 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.CartMapper.delete - ==> Parameters: 35(Integer)
+09:28:02.841 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.CartMapper.delete - <==    Updates: 1
+09:28:03.122 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.delete - ==>  Preparing: DELETE FROM `auto`.`cart` WHERE `id` = ? 
+09:28:03.122 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.delete - ==> Parameters: 36(Integer)
+09:28:03.272 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.delete - <==    Updates: 1
+09:28:05.853 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+09:28:05.853 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+09:28:05.855 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 1
+09:28:05.967 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+09:28:05.968 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+09:28:05.970 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 1
+09:28:06.108 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+09:28:06.108 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+09:28:06.109 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 1
+09:28:06.131 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.update - ==>  Preparing: UPDATE `auto`.`product` SET `name` = ?,`price` = ?,`stock` = ?,`img` = ? WHERE `id` = ? 
+09:28:06.132 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.update - ==> Parameters: 上料装置2(String), 3888.8(Double), 19(Integer), fcf700c803fb0f1a.png(String), 33(Integer)
+09:28:06.133 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.update - <==    Updates: 0
+09:28:06.145 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.RecordMapper.insert - ==>  Preparing: INSERT INTO `auto`.`record`(`userId`, `productId`, `num`) VALUES (?, ?, ?) 
+09:28:06.145 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.RecordMapper.insert - ==> Parameters: 7(Integer), 18(Integer), 1(Integer)
+09:28:06.207 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.RecordMapper.insert - <==    Updates: 1
+09:28:06.208 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.delete - ==>  Preparing: DELETE FROM `auto`.`cart` WHERE `id` = ? 
+09:28:06.208 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.delete - ==> Parameters: 33(Integer)
+09:28:06.282 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.delete - <==    Updates: 1
+09:28:06.337 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+09:28:06.337 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+09:28:06.340 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 0
+09:28:25.676 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr 
+09:28:25.676 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 
+09:28:25.680 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 17
+09:28:27.805 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr WHERE (id=?) 
+09:28:27.805 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 18(Integer)
+09:28:27.806 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 1
+09:28:29.139 logback [http-nio-9262-exec-4] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==>  Preparing: select id,userId,productId,num from cart where userId = ? AND productId = ? 
+09:28:29.139 logback [http-nio-9262-exec-4] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==> Parameters: 7(Integer), 18(Integer)
+09:28:29.140 logback [http-nio-9262-exec-4] DEBUG c.b.a.d.C.selectByUserIdAndProductId - <==      Total: 0
+09:28:29.140 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.CartMapper.insert - ==>  Preparing: INSERT INTO cart (userId,productId,num) VALUES (?,?,?) 
+09:28:29.140 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.CartMapper.insert - ==> Parameters: 7(Integer), 18(Integer), 1(Integer)
+09:28:29.332 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.CartMapper.insert - <==    Updates: 1
+09:28:30.291 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.RecordMapper.select - ==>  Preparing: select re.id,re.userId,re.productId,re.num,re.createTime,pr.name as productName from record re join product pr on pr.id = re.productId where userId = ? 
+09:28:30.291 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.RecordMapper.select - ==> Parameters: 7(Integer)
+09:28:30.298 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.RecordMapper.select - <==      Total: 12
+10:33:35.312 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+10:33:35.313 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+10:33:35.320 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 1
+10:37:53.506 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+10:37:53.506 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+10:37:53.525 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 1
+10:37:53.578 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+10:37:53.578 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+10:37:53.582 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 1
+10:37:53.659 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+10:37:53.659 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+10:37:53.660 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 1
+10:37:53.666 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.update - ==>  Preparing: UPDATE `auto`.`product` SET `name` = ?,`price` = ?,`stock` = ?,`img` = ? WHERE `id` = ? 
+10:37:53.683 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.update - ==> Parameters: 上料装置2(String), 3888.8(Double), 19(Integer), fcf700c803fb0f1a.png(String), 37(Integer)
+10:37:53.750 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.update - <==    Updates: 0
+10:37:53.752 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.RecordMapper.insert - ==>  Preparing: INSERT INTO `auto`.`record`(`userId`, `productId`, `num`) VALUES (?, ?, ?) 
+10:37:53.759 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.RecordMapper.insert - ==> Parameters: 7(Integer), 18(Integer), 1(Integer)
+10:37:53.986 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.RecordMapper.insert - <==    Updates: 1
+10:37:53.992 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.delete - ==>  Preparing: DELETE FROM `auto`.`cart` WHERE `id` = ? 
+10:37:53.992 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.delete - ==> Parameters: 37(Integer)
+10:37:54.099 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.delete - <==    Updates: 1
+10:37:54.176 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+10:37:54.177 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+10:37:54.180 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 0
+10:39:54.530 logback [http-nio-9262-exec-6] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM plan 
+10:39:54.530 logback [http-nio-9262-exec-6] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==> Parameters: 
+10:39:54.683 logback [http-nio-9262-exec-6] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - <==      Total: 1
+10:39:54.743 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.PlanMapper.select - ==>  Preparing: select id , name ,merchants from plan LIMIT ? 
+10:39:54.744 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.PlanMapper.select - ==> Parameters: 10(Integer)
+10:39:54.748 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.PlanMapper.select - <==      Total: 3
+10:39:54.895 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+10:39:54.896 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 1(Integer)
+10:39:54.920 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 5
+10:39:54.921 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+10:39:54.921 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+10:39:54.931 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 3
+10:39:54.934 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+10:39:54.934 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+10:39:54.935 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+10:39:56.935 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+10:39:56.937 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+10:39:56.941 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+10:40:00.174 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+10:40:00.174 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+10:40:00.176 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+10:40:00.209 logback [http-nio-9262-exec-2] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==>  Preparing: select id,userId,productId,num from cart where userId = ? AND productId = ? 
+10:40:00.209 logback [http-nio-9262-exec-2] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==> Parameters: 7(Integer), 2(Integer)
+10:40:00.213 logback [http-nio-9262-exec-2] DEBUG c.b.a.d.C.selectByUserIdAndProductId - <==      Total: 0
+10:40:00.216 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.insert - ==>  Preparing: INSERT INTO cart (userId,productId,num) VALUES (?,?,?) 
+10:40:00.216 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.insert - ==> Parameters: 7(Integer), 2(Integer), 1(Integer)
+10:40:00.218 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.insert - <==    Updates: 1
+10:40:00.219 logback [http-nio-9262-exec-2] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==>  Preparing: select id,userId,productId,num from cart where userId = ? AND productId = ? 
+10:40:00.219 logback [http-nio-9262-exec-2] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==> Parameters: 7(Integer), 3(Integer)
+10:40:00.222 logback [http-nio-9262-exec-2] DEBUG c.b.a.d.C.selectByUserIdAndProductId - <==      Total: 0
+10:40:00.223 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.insert - ==>  Preparing: INSERT INTO cart (userId,productId,num) VALUES (?,?,?) 
+10:40:00.223 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.insert - ==> Parameters: 7(Integer), 3(Integer), 1(Integer)
+10:40:00.224 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.insert - <==    Updates: 1
+10:40:02.237 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+10:40:02.238 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+10:40:02.242 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 2
+10:44:18.602 logback [http-nio-9262-exec-7] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM plan 
+10:44:18.603 logback [http-nio-9262-exec-7] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==> Parameters: 
+10:44:18.611 logback [http-nio-9262-exec-7] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - <==      Total: 1
+10:44:18.612 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.PlanMapper.select - ==>  Preparing: select id , name ,merchants from plan LIMIT ? 
+10:44:18.613 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.PlanMapper.select - ==> Parameters: 10(Integer)
+10:44:18.615 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.PlanMapper.select - <==      Total: 3
+10:44:18.616 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+10:44:18.618 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 1(Integer)
+10:44:18.621 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 5
+10:44:18.623 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+10:44:18.623 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+10:44:18.625 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 3
+10:44:18.625 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+10:44:18.625 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+10:44:18.627 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+10:44:19.810 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr 
+10:44:19.811 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 
+10:44:19.817 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 17
+10:44:44.692 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.UserController - >>>===============================================
+10:44:44.694 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.UserController - METHOD : getUser
+10:44:44.694 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.UserController - FROM : 0:0:0:0:0:0:0:1
+10:44:44.694 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.UserController - URL : http://localhost:9262/user
+10:44:44.705 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.UserController - Params : {"userId":["7"]}
+10:44:45.133 logback [http-nio-9262-exec-2] DEBUG c.b.auto.dao.UserMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user u INNER JOIN tb_user_role r ON u.roleId = r.roleId WHERE (u.userId = ?) 
+10:44:45.133 logback [http-nio-9262-exec-2] DEBUG c.b.auto.dao.UserMapper.select_COUNT - ==> Parameters: 7(Integer)
+10:44:45.146 logback [http-nio-9262-exec-2] DEBUG c.b.auto.dao.UserMapper.select_COUNT - <==      Total: 1
+10:44:45.151 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userId = ?) LIMIT ? 
+10:44:45.152 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: 7(Integer), 10(Integer)
+10:44:45.159 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+10:44:45.198 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.UserController - response : {"list":[{"admin":false,"createTime":"2019-05-21 23:18:46","email":"1163634611@qq.com","password":"adminadmin","phone":"15858129262","roleId":1,"roleName":"saler","userId":7,"userName":"adminadmin"}],"page":1,"size":1,"total":1}
+10:44:45.198 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.UserController - <<<===============================================
+10:44:48.059 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr 
+10:44:48.060 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 
+10:44:48.065 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 17
+10:44:48.730 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr WHERE (id=?) 
+10:44:48.731 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 18(Integer)
+10:44:48.735 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 1
+10:44:49.809 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM plan 
+10:44:49.810 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==> Parameters: 
+10:44:49.811 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - <==      Total: 1
+10:44:49.813 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.PlanMapper.select - ==>  Preparing: select id , name ,merchants from plan LIMIT ? 
+10:44:49.813 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.PlanMapper.select - ==> Parameters: 10(Integer)
+10:44:49.814 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.PlanMapper.select - <==      Total: 3
+10:44:49.815 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+10:44:49.815 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 1(Integer)
+10:44:49.817 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 5
+10:44:49.820 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+10:44:49.821 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+10:44:49.823 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 3
+10:44:49.823 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+10:44:49.824 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+10:44:49.826 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+10:44:50.765 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+10:44:50.765 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+10:44:50.768 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+10:44:52.652 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.UserController - >>>===============================================
+10:44:52.652 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.UserController - METHOD : getUser
+10:44:52.652 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.UserController - FROM : 0:0:0:0:0:0:0:1
+10:44:52.652 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.UserController - URL : http://localhost:9262/user
+10:44:52.652 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.UserController - Params : {"userId":["7"]}
+10:44:52.655 logback [http-nio-9262-exec-6] DEBUG c.b.auto.dao.UserMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user u INNER JOIN tb_user_role r ON u.roleId = r.roleId WHERE (u.userId = ?) 
+10:44:52.655 logback [http-nio-9262-exec-6] DEBUG c.b.auto.dao.UserMapper.select_COUNT - ==> Parameters: 7(Integer)
+10:44:52.657 logback [http-nio-9262-exec-6] DEBUG c.b.auto.dao.UserMapper.select_COUNT - <==      Total: 1
+10:44:52.658 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userId = ?) LIMIT ? 
+10:44:52.658 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: 7(Integer), 10(Integer)
+10:44:52.660 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+10:44:52.661 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.UserController - response : {"list":[{"admin":false,"createTime":"2019-05-21 23:18:46","email":"1163634611@qq.com","password":"adminadmin","phone":"15858129262","roleId":1,"roleName":"saler","userId":7,"userName":"adminadmin"}],"page":1,"size":1,"total":1}
+10:44:52.661 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.UserController - <<<===============================================
+10:51:42.424 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+10:51:42.424 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+10:51:42.432 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 2
+10:51:43.008 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.RecordMapper.select - ==>  Preparing: select re.id,re.userId,re.productId,re.num,re.createTime,pr.name as productName from record re join product pr on pr.id = re.productId where userId = ? 
+10:51:43.020 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.RecordMapper.select - ==> Parameters: 7(Integer)
+10:51:43.033 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.RecordMapper.select - <==      Total: 13
+12:44:39.084 logback [main] INFO  com.bysj.auto.AutoApplication - Starting AutoApplication on Lenovo-PC with PID 6552 (E:\lixiaoyi\lxy\lxy\target\classes started by Lenovo in E:\lixiaoyi\lxy\lxy)
+12:44:39.116 logback [main] INFO  com.bysj.auto.AutoApplication - No active profile set, falling back to default profiles: default
+12:44:41.298 logback [main] ERROR o.a.c.core.AprLifecycleListener - An incompatible version [1.2.7] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+12:44:41.540 logback [main] ERROR o.a.c.core.AprLifecycleListener - An incompatible version [1.2.7] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+12:44:41.806 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9262 (http)
+12:44:41.824 logback [main] ERROR o.a.c.core.AprLifecycleListener - An incompatible version [1.2.7] of the APR based Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+12:44:41.824 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9262"]
+12:44:41.834 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:44:41.835 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+12:44:42.187 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:44:42.188 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2746 ms
+12:44:43.380 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9262"]
+12:44:43.409 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9262 (http) with context path ''
+12:44:43.412 logback [main] INFO  com.bysj.auto.AutoApplication - Started AutoApplication in 5.211 seconds (JVM running for 9.277)
+12:44:54.965 logback [http-nio-9262-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:44:54.965 logback [http-nio-9262-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:44:54.981 logback [http-nio-9262-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+12:44:55.128 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - >>>===============================================
+12:44:55.128 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - METHOD : login
+12:44:55.129 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+12:44:55.129 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+12:44:55.183 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - Params : {}
+12:44:55.217 logback [http-nio-9262-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:44:57.134 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.LoginController - >>>===============================================
+12:44:57.135 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.LoginController - METHOD : login
+12:44:57.135 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+12:44:57.135 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+12:44:57.135 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.LoginController - Params : {}
+12:44:57.725 logback [http-nio-9262-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:44:57.741 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+12:44:57.756 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+12:44:57.781 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: adminadmin(String)
+12:44:57.781 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: adminadmin(String)
+12:44:57.996 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+12:44:57.996 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+12:44:58.002 logback [http-nio-9262-exec-2] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+12:44:58.002 logback [http-nio-9262-exec-3] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+12:44:58.002 logback [http-nio-9262-exec-2] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 11:44:58(String), 7(Integer)
+12:44:58.002 logback [http-nio-9262-exec-3] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 11:44:58(String), 7(Integer)
+12:44:58.018 logback [http-nio-9262-exec-2] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+12:44:58.018 logback [http-nio-9262-exec-3] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+12:44:58.019 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==>  Preparing: insert into login(userId,fail) values(?,?) 
+12:44:58.019 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==>  Preparing: insert into login(userId,fail) values(?,?) 
+12:44:58.020 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==> Parameters: 7(Integer), 0(Integer)
+12:44:58.020 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==> Parameters: 7(Integer), 0(Integer)
+12:44:58.336 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.LoginMapper.insert - <==    Updates: 1
+12:44:58.336 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.LoginMapper.insert - <==    Updates: 1
+12:44:58.485 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.LoginController - response : {"code":2000,"data":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4NjI5ODk4fQ.fwmQMgWM-7HiYrfTqQ-rZ5Oou2diu-9wIFlpZEfzbOU","message":"成功"}
+12:44:58.485 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - response : {"code":2000,"data":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4NjI5ODk4fQ.fwmQMgWM-7HiYrfTqQ-rZ5Oou2diu-9wIFlpZEfzbOU","message":"成功"}
+12:44:58.486 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.LoginController - <<<===============================================
+12:44:58.486 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - <<<===============================================
+12:44:58.550 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userId = ?) 
+12:44:58.551 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: 7(Integer)
+12:44:58.553 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+12:44:58.555 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+12:44:58.555 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+12:44:58.555 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+12:44:58.555 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+12:44:58.556 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4NjI5ODk4fQ.fwmQMgWM-7HiYrfTqQ-rZ5Oou2diu-9wIFlpZEfzbOU"]}
+12:44:58.566 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-21 23:18:46","email":"1163634611@qq.com","password":"adminadmin","phone":"15858129262","roleId":1,"roleName":"saler","userId":7,"userName":"adminadmin"},"message":"成功"}
+12:44:58.567 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+12:44:58.576 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userId = ?) 
+12:44:58.577 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: 7(Integer)
+12:44:58.580 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+12:44:58.582 logback [http-nio-9262-exec-5] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+12:44:58.582 logback [http-nio-9262-exec-5] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+12:44:58.583 logback [http-nio-9262-exec-5] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+12:44:58.583 logback [http-nio-9262-exec-5] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+12:44:58.584 logback [http-nio-9262-exec-5] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4NjI5ODk4fQ.fwmQMgWM-7HiYrfTqQ-rZ5Oou2diu-9wIFlpZEfzbOU"]}
+12:44:58.584 logback [http-nio-9262-exec-5] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-21 23:18:46","email":"1163634611@qq.com","password":"adminadmin","phone":"15858129262","roleId":1,"roleName":"saler","userId":7,"userName":"adminadmin"},"message":"成功"}
+12:44:58.584 logback [http-nio-9262-exec-5] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+12:45:02.171 logback [http-nio-9262-exec-9] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM plan 
+12:45:02.171 logback [http-nio-9262-exec-9] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==> Parameters: 
+12:45:02.184 logback [http-nio-9262-exec-9] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - <==      Total: 1
+12:45:02.187 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.PlanMapper.select - ==>  Preparing: select id , name ,merchants from plan LIMIT ? 
+12:45:02.187 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.PlanMapper.select - ==> Parameters: 10(Integer)
+12:45:02.192 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.PlanMapper.select - <==      Total: 3
+12:45:02.194 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:45:02.194 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 1(Integer)
+12:45:02.257 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 5
+12:45:02.258 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:45:02.258 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+12:45:02.260 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 3
+12:45:02.261 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:45:02.261 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+12:45:02.265 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+12:45:02.938 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr 
+12:45:02.938 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 
+12:45:02.946 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 17
+12:45:05.027 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+12:45:05.027 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+12:45:05.058 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 2
+12:45:06.287 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.RecordMapper.select - ==>  Preparing: select re.id,re.userId,re.productId,re.num,re.createTime,pr.name as productName from record re join product pr on pr.id = re.productId where userId = ? 
+12:45:06.287 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.RecordMapper.select - ==> Parameters: 7(Integer)
+12:45:06.298 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.RecordMapper.select - <==      Total: 13
+12:45:07.589 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+12:45:07.590 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+12:45:07.592 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 2
+12:45:11.424 logback [http-nio-9262-exec-9] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM plan 
+12:45:11.425 logback [http-nio-9262-exec-9] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==> Parameters: 
+12:45:11.426 logback [http-nio-9262-exec-9] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - <==      Total: 1
+12:45:11.428 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.PlanMapper.select - ==>  Preparing: select id , name ,merchants from plan LIMIT ? 
+12:45:11.428 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.PlanMapper.select - ==> Parameters: 10(Integer)
+12:45:11.431 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.PlanMapper.select - <==      Total: 3
+12:45:11.432 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:45:11.432 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 1(Integer)
+12:45:11.435 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 5
+12:45:11.436 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:45:11.436 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+12:45:11.439 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 3
+12:45:11.440 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:45:11.440 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+12:45:11.441 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+12:45:20.138 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+12:45:20.139 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+12:45:20.141 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 2
+12:46:33.398 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.UserController - >>>===============================================
+12:46:33.398 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.UserController - METHOD : getUser
+12:46:33.398 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.UserController - FROM : 0:0:0:0:0:0:0:1
+12:46:33.398 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.UserController - URL : http://localhost:9262/user
+12:46:33.398 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.UserController - Params : {"userId":["7"]}
+12:46:33.409 logback [http-nio-9262-exec-3] DEBUG c.b.auto.dao.UserMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user u INNER JOIN tb_user_role r ON u.roleId = r.roleId WHERE (u.userId = ?) 
+12:46:33.410 logback [http-nio-9262-exec-3] DEBUG c.b.auto.dao.UserMapper.select_COUNT - ==> Parameters: 7(Integer)
+12:46:33.411 logback [http-nio-9262-exec-3] DEBUG c.b.auto.dao.UserMapper.select_COUNT - <==      Total: 1
+12:46:33.411 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userId = ?) LIMIT ? 
+12:46:33.412 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: 7(Integer), 10(Integer)
+12:46:33.414 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+12:46:33.421 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.UserController - response : {"list":[{"admin":false,"createTime":"2019-05-21 23:18:46","email":"1163634611@qq.com","password":"adminadmin","phone":"15858129262","roleId":1,"roleName":"saler","userId":7,"userName":"adminadmin"}],"page":1,"size":1,"total":1}
+12:46:33.421 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.UserController - <<<===============================================
+12:46:44.674 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+12:46:44.675 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+12:46:44.677 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 2
+12:46:46.504 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.RecordMapper.select - ==>  Preparing: select re.id,re.userId,re.productId,re.num,re.createTime,pr.name as productName from record re join product pr on pr.id = re.productId where userId = ? 
+12:46:46.504 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.RecordMapper.select - ==> Parameters: 7(Integer)
+12:46:46.509 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.RecordMapper.select - <==      Total: 13
+12:46:49.420 logback [http-nio-9262-exec-8] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM plan 
+12:46:49.421 logback [http-nio-9262-exec-8] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==> Parameters: 
+12:46:49.422 logback [http-nio-9262-exec-8] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - <==      Total: 1
+12:46:49.423 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.PlanMapper.select - ==>  Preparing: select id , name ,merchants from plan LIMIT ? 
+12:46:49.424 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.PlanMapper.select - ==> Parameters: 10(Integer)
+12:46:49.426 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.PlanMapper.select - <==      Total: 3
+12:46:49.427 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:46:49.427 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 1(Integer)
+12:46:49.429 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 5
+12:46:49.430 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:46:49.430 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+12:46:49.432 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 3
+12:46:49.433 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:46:49.433 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+12:46:49.436 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+12:49:07.784 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.RecordMapper.select - ==>  Preparing: select re.id,re.userId,re.productId,re.num,re.createTime,pr.name as productName from record re join product pr on pr.id = re.productId where userId = ? 
+12:49:07.784 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.RecordMapper.select - ==> Parameters: 7(Integer)
+12:49:07.788 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.RecordMapper.select - <==      Total: 13
+12:49:14.676 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.UserController - >>>===============================================
+12:49:14.676 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.UserController - METHOD : getUser
+12:49:14.676 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.UserController - FROM : 0:0:0:0:0:0:0:1
+12:49:14.676 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.UserController - URL : http://localhost:9262/user
+12:49:14.676 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.UserController - Params : {"userId":["7"]}
+12:49:14.679 logback [http-nio-9262-exec-1] DEBUG c.b.auto.dao.UserMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user u INNER JOIN tb_user_role r ON u.roleId = r.roleId WHERE (u.userId = ?) 
+12:49:14.679 logback [http-nio-9262-exec-1] DEBUG c.b.auto.dao.UserMapper.select_COUNT - ==> Parameters: 7(Integer)
+12:49:14.680 logback [http-nio-9262-exec-1] DEBUG c.b.auto.dao.UserMapper.select_COUNT - <==      Total: 1
+12:49:14.681 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userId = ?) LIMIT ? 
+12:49:14.682 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: 7(Integer), 10(Integer)
+12:49:14.685 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+12:49:14.686 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.UserController - response : {"list":[{"admin":false,"createTime":"2019-05-21 23:18:46","email":"1163634611@qq.com","password":"adminadmin","phone":"15858129262","roleId":1,"roleName":"saler","userId":7,"userName":"adminadmin"}],"page":1,"size":1,"total":1}
+12:49:14.686 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.UserController - <<<===============================================
+12:53:46.464 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - >>>===============================================
+12:53:46.465 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - METHOD : getUser
+12:53:46.465 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - FROM : 0:0:0:0:0:0:0:1
+12:53:46.465 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - URL : http://localhost:9262/user
+12:53:46.465 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - Params : {"userId":["7"]}
+12:53:46.467 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.UserMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user u INNER JOIN tb_user_role r ON u.roleId = r.roleId WHERE (u.userId = ?) 
+12:53:46.468 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.UserMapper.select_COUNT - ==> Parameters: 7(Integer)
+12:53:46.469 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.UserMapper.select_COUNT - <==      Total: 1
+12:53:46.470 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userId = ?) LIMIT ? 
+12:53:46.470 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: 7(Integer), 10(Integer)
+12:53:46.472 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+12:53:46.472 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - response : {"list":[{"admin":false,"createTime":"2019-05-21 23:18:46","email":"1163634611@qq.com","password":"adminadmin","phone":"15858129262","roleId":1,"roleName":"saler","userId":7,"userName":"adminadmin"}],"page":1,"size":1,"total":1}
+12:53:46.472 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - <<<===============================================
+12:56:45.324 logback [http-nio-9262-exec-7] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM plan 
+12:56:45.325 logback [http-nio-9262-exec-7] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==> Parameters: 
+12:56:45.327 logback [http-nio-9262-exec-7] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - <==      Total: 1
+12:56:45.329 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.PlanMapper.select - ==>  Preparing: select id , name ,merchants from plan LIMIT ? 
+12:56:45.329 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.PlanMapper.select - ==> Parameters: 10(Integer)
+12:56:45.331 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.PlanMapper.select - <==      Total: 3
+12:56:45.331 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:56:45.332 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 1(Integer)
+12:56:45.335 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 5
+12:56:45.336 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:56:45.336 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+12:56:45.338 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 3
+12:56:45.338 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:56:45.338 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+12:56:45.340 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+12:56:46.366 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr 
+12:56:46.367 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 
+12:56:46.373 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 17
+12:56:49.892 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr 
+12:56:49.892 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 
+12:56:49.895 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 17
+12:56:50.659 logback [http-nio-9262-exec-9] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM plan 
+12:56:50.659 logback [http-nio-9262-exec-9] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==> Parameters: 
+12:56:50.660 logback [http-nio-9262-exec-9] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - <==      Total: 1
+12:56:50.661 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.PlanMapper.select - ==>  Preparing: select id , name ,merchants from plan LIMIT ? 
+12:56:50.661 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.PlanMapper.select - ==> Parameters: 10(Integer)
+12:56:50.663 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.PlanMapper.select - <==      Total: 3
+12:56:50.664 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:56:50.664 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 1(Integer)
+12:56:50.666 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 5
+12:56:50.667 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:56:50.668 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+12:56:50.670 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 3
+12:56:50.671 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:56:50.671 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+12:56:50.673 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+12:56:52.607 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+12:56:52.607 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+12:56:52.609 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 2
+12:59:25.390 logback [http-nio-9262-exec-1] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM plan 
+12:59:25.390 logback [http-nio-9262-exec-1] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==> Parameters: 
+12:59:25.391 logback [http-nio-9262-exec-1] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - <==      Total: 1
+12:59:25.392 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.PlanMapper.select - ==>  Preparing: select id , name ,merchants from plan LIMIT ? 
+12:59:25.392 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.PlanMapper.select - ==> Parameters: 10(Integer)
+12:59:25.394 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.PlanMapper.select - <==      Total: 3
+12:59:25.395 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:59:25.396 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 1(Integer)
+12:59:25.398 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 5
+12:59:25.399 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:59:25.399 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+12:59:25.401 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 3
+12:59:25.401 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+12:59:25.402 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+12:59:25.403 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+12:59:26.662 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.UserController - >>>===============================================
+12:59:26.662 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.UserController - METHOD : getUser
+12:59:26.662 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.UserController - FROM : 0:0:0:0:0:0:0:1
+12:59:26.662 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.UserController - URL : http://localhost:9262/user
+12:59:26.662 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.UserController - Params : {"userId":["7"]}
+12:59:26.665 logback [http-nio-9262-exec-3] DEBUG c.b.auto.dao.UserMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user u INNER JOIN tb_user_role r ON u.roleId = r.roleId WHERE (u.userId = ?) 
+12:59:26.665 logback [http-nio-9262-exec-3] DEBUG c.b.auto.dao.UserMapper.select_COUNT - ==> Parameters: 7(Integer)
+12:59:26.771 logback [http-nio-9262-exec-3] DEBUG c.b.auto.dao.UserMapper.select_COUNT - <==      Total: 1
+12:59:26.772 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userId = ?) LIMIT ? 
+12:59:26.772 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: 7(Integer), 10(Integer)
+12:59:26.837 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+12:59:26.838 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.UserController - response : {"list":[{"admin":false,"createTime":"2019-05-21 23:18:46","email":"1163634611@qq.com","password":"adminadmin","phone":"15858129262","roleId":1,"roleName":"saler","userId":7,"userName":"adminadmin"}],"page":1,"size":1,"total":1}
+12:59:26.838 logback [http-nio-9262-exec-3] INFO  c.b.auto.controller.UserController - <<<===============================================
+13:07:41.761 logback [http-nio-9262-exec-7] INFO  c.b.auto.controller.LoginController - >>>===============================================
+13:07:41.761 logback [http-nio-9262-exec-7] INFO  c.b.auto.controller.LoginController - METHOD : login
+13:07:41.761 logback [http-nio-9262-exec-7] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+13:07:41.761 logback [http-nio-9262-exec-7] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+13:07:41.761 logback [http-nio-9262-exec-7] INFO  c.b.auto.controller.LoginController - Params : {}
+13:07:41.762 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+13:07:41.763 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: lixiaoyi(String)
+13:07:42.184 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+13:07:42.185 logback [http-nio-9262-exec-7] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+13:07:42.185 logback [http-nio-9262-exec-7] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 12:07:42(String), 50(Integer)
+13:07:42.223 logback [http-nio-9262-exec-7] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+13:07:42.284 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==>  Preparing: insert into login(userId,fail) values(?,?) 
+13:07:42.285 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==> Parameters: 50(Integer), 1(Integer)
+13:07:42.897 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.LoginMapper.insert - <==    Updates: 1
+13:07:42.897 logback [http-nio-9262-exec-7] INFO  c.b.auto.controller.LoginController - response : {"code":4002,"data":2,"message":"登陆失败，密码错误"}
+13:07:42.897 logback [http-nio-9262-exec-7] INFO  c.b.auto.controller.LoginController - <<<===============================================
+13:07:46.607 logback [http-nio-9262-exec-9] INFO  c.b.auto.controller.LoginController - >>>===============================================
+13:07:46.607 logback [http-nio-9262-exec-9] INFO  c.b.auto.controller.LoginController - METHOD : login
+13:07:46.607 logback [http-nio-9262-exec-9] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+13:07:46.607 logback [http-nio-9262-exec-9] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+13:07:46.607 logback [http-nio-9262-exec-9] INFO  c.b.auto.controller.LoginController - Params : {}
+13:07:46.608 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+13:07:46.608 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: lixiaoyi(String)
+13:07:46.609 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+13:07:46.610 logback [http-nio-9262-exec-9] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+13:07:46.610 logback [http-nio-9262-exec-9] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 12:07:46(String), 50(Integer)
+13:07:46.611 logback [http-nio-9262-exec-9] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+13:07:46.612 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==>  Preparing: insert into login(userId,fail) values(?,?) 
+13:07:46.612 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==> Parameters: 50(Integer), 1(Integer)
+13:07:46.772 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.LoginMapper.insert - <==    Updates: 1
+13:07:46.773 logback [http-nio-9262-exec-9] INFO  c.b.auto.controller.LoginController - response : {"code":4002,"data":1,"message":"登陆失败，密码错误"}
+13:07:46.773 logback [http-nio-9262-exec-9] INFO  c.b.auto.controller.LoginController - <<<===============================================
+13:07:47.914 logback [http-nio-9262-exec-10] INFO  c.b.auto.controller.LoginController - >>>===============================================
+13:07:47.915 logback [http-nio-9262-exec-10] INFO  c.b.auto.controller.LoginController - METHOD : login
+13:07:47.915 logback [http-nio-9262-exec-10] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+13:07:47.915 logback [http-nio-9262-exec-10] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+13:07:47.915 logback [http-nio-9262-exec-10] INFO  c.b.auto.controller.LoginController - Params : {}
+13:07:47.915 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+13:07:47.916 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: lixiaoyi(String)
+13:07:47.918 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+13:07:47.918 logback [http-nio-9262-exec-10] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+13:07:47.918 logback [http-nio-9262-exec-10] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 12:07:47(String), 50(Integer)
+13:07:47.920 logback [http-nio-9262-exec-10] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+13:07:47.920 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==>  Preparing: insert into login(userId,fail) values(?,?) 
+13:07:47.921 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==> Parameters: 50(Integer), 1(Integer)
+13:07:48.216 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.LoginMapper.insert - <==    Updates: 1
+13:07:48.216 logback [http-nio-9262-exec-10] INFO  c.b.auto.controller.LoginController - response : {"code":4002,"data":0,"message":"登陆失败，密码错误"}
+13:07:48.217 logback [http-nio-9262-exec-10] INFO  c.b.auto.controller.LoginController - <<<===============================================
+13:08:32.398 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - >>>===============================================
+13:08:32.398 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - METHOD : login
+13:08:32.398 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+13:08:32.398 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+13:08:32.398 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - Params : {}
+13:08:32.399 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+13:08:32.399 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: lixiaoyi(String)
+13:08:32.401 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+13:08:32.401 logback [http-nio-9262-exec-1] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+13:08:32.401 logback [http-nio-9262-exec-1] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 12:08:32(String), 50(Integer)
+13:08:32.402 logback [http-nio-9262-exec-1] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+13:08:32.403 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - response : {"code":4003,"message":"登陆失败，尝试次数超出限制"}
+13:08:32.403 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - <<<===============================================
+13:08:53.916 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - >>>===============================================
+13:08:53.916 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - METHOD : addUser
+13:08:53.916 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - FROM : 0:0:0:0:0:0:0:1
+13:08:53.916 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - URL : http://localhost:9262/user
+13:08:53.916 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - Params : {}
+13:08:54.023 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.UserMapper.insert - ==>  Preparing: INSERT INTO tb_user (userName , password , phone , email , roleId ) VALUES (? , ? , ? , ? , ? ) 
+13:08:54.024 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.UserMapper.insert - ==> Parameters: lililili(String), 12345678(String), 15858129262(String), 1163634611@qq.com(String), 2(Integer)
+13:08:54.143 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.UserMapper.insert - <==    Updates: 1
+13:08:54.143 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - response : {"code":2000,"data":1,"message":"成功"}
+13:08:54.143 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - <<<===============================================
+13:09:07.143 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - >>>===============================================
+13:09:07.143 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - METHOD : login
+13:09:07.143 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+13:09:07.143 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+13:09:07.144 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - Params : {}
+13:09:07.145 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+13:09:07.145 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: lililili(String)
+13:09:07.147 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+13:09:07.148 logback [http-nio-9262-exec-5] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+13:09:07.148 logback [http-nio-9262-exec-5] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 12:09:07(String), 51(Integer)
+13:09:07.149 logback [http-nio-9262-exec-5] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+13:09:07.150 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==>  Preparing: insert into login(userId,fail) values(?,?) 
+13:09:07.150 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==> Parameters: 51(Integer), 1(Integer)
+13:09:07.298 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.LoginMapper.insert - <==    Updates: 1
+13:09:07.298 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - response : {"code":4002,"data":2,"message":"登陆失败，密码错误"}
+13:09:07.298 logback [http-nio-9262-exec-5] INFO  c.b.auto.controller.LoginController - <<<===============================================
+13:09:12.626 logback [http-nio-9262-exec-7] INFO  c.b.auto.controller.LoginController - >>>===============================================
+13:09:12.626 logback [http-nio-9262-exec-7] INFO  c.b.auto.controller.LoginController - METHOD : login
+13:09:12.626 logback [http-nio-9262-exec-7] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+13:09:12.626 logback [http-nio-9262-exec-7] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+13:09:12.626 logback [http-nio-9262-exec-7] INFO  c.b.auto.controller.LoginController - Params : {}
+13:09:12.627 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+13:09:12.627 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: lililili(String)
+13:09:12.629 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+13:09:12.630 logback [http-nio-9262-exec-7] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+13:09:12.630 logback [http-nio-9262-exec-7] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 12:09:12(String), 51(Integer)
+13:09:12.631 logback [http-nio-9262-exec-7] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+13:09:12.631 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==>  Preparing: insert into login(userId,fail) values(?,?) 
+13:09:12.632 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==> Parameters: 51(Integer), 1(Integer)
+13:09:12.809 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.LoginMapper.insert - <==    Updates: 1
+13:09:12.810 logback [http-nio-9262-exec-7] INFO  c.b.auto.controller.LoginController - response : {"code":4002,"data":1,"message":"登陆失败，密码错误"}
+13:09:12.810 logback [http-nio-9262-exec-7] INFO  c.b.auto.controller.LoginController - <<<===============================================
+13:09:13.663 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.LoginController - >>>===============================================
+13:09:13.664 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.LoginController - METHOD : login
+13:09:13.664 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+13:09:13.664 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+13:09:13.664 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.LoginController - Params : {}
+13:09:13.665 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+13:09:13.665 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: lililili(String)
+13:09:13.667 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+13:09:13.668 logback [http-nio-9262-exec-6] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+13:09:13.668 logback [http-nio-9262-exec-6] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 12:09:13(String), 51(Integer)
+13:09:13.669 logback [http-nio-9262-exec-6] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+13:09:13.670 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==>  Preparing: insert into login(userId,fail) values(?,?) 
+13:09:13.670 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==> Parameters: 51(Integer), 1(Integer)
+13:09:13.850 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.LoginMapper.insert - <==    Updates: 1
+13:09:13.851 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.LoginController - response : {"code":4002,"data":0,"message":"登陆失败，密码错误"}
+13:09:13.851 logback [http-nio-9262-exec-6] INFO  c.b.auto.controller.LoginController - <<<===============================================
+13:09:15.942 logback [http-nio-9262-exec-8] INFO  c.b.auto.controller.LoginController - >>>===============================================
+13:09:15.942 logback [http-nio-9262-exec-8] INFO  c.b.auto.controller.LoginController - METHOD : login
+13:09:15.942 logback [http-nio-9262-exec-8] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+13:09:15.942 logback [http-nio-9262-exec-8] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+13:09:15.950 logback [http-nio-9262-exec-8] INFO  c.b.auto.controller.LoginController - Params : {}
+13:09:15.982 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+13:09:15.982 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: lililili(String)
+13:09:15.985 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+13:09:15.985 logback [http-nio-9262-exec-8] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+13:09:15.986 logback [http-nio-9262-exec-8] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 12:09:15(String), 51(Integer)
+13:09:15.987 logback [http-nio-9262-exec-8] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+13:09:15.987 logback [http-nio-9262-exec-8] INFO  c.b.auto.controller.LoginController - response : {"code":4003,"message":"登陆失败，尝试次数超出限制"}
+13:09:15.987 logback [http-nio-9262-exec-8] INFO  c.b.auto.controller.LoginController - <<<===============================================
+13:09:46.626 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - >>>===============================================
+13:09:46.626 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - METHOD : login
+13:09:46.626 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+13:09:46.626 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+13:09:46.626 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - Params : {}
+13:09:46.627 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userName = ?) 
+13:09:46.627 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: adminadmin(String)
+13:09:46.628 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+13:09:46.629 logback [http-nio-9262-exec-2] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==>  Preparing: select count(0) from login where fail=1 and loginTime > ? and userId = ? 
+13:09:46.629 logback [http-nio-9262-exec-2] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - ==> Parameters: 2019-05-22 12:09:46(String), 7(Integer)
+13:09:46.630 logback [http-nio-9262-exec-2] DEBUG c.b.a.dao.LoginMapper.countFailAtfer - <==      Total: 1
+13:09:46.630 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==>  Preparing: insert into login(userId,fail) values(?,?) 
+13:09:46.630 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.LoginMapper.insert - ==> Parameters: 7(Integer), 0(Integer)
+13:09:46.849 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.LoginMapper.insert - <==    Updates: 1
+13:09:46.854 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - response : {"code":2000,"data":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4NjMxMzg2fQ.bMHhN5K5rPZG9YJSZDiVZqzBkKm8obAziI7eSKQtkcM","message":"成功"}
+13:09:46.854 logback [http-nio-9262-exec-2] INFO  c.b.auto.controller.LoginController - <<<===============================================
+13:09:46.863 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userId = ?) 
+13:09:46.863 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: 7(Integer)
+13:09:46.865 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+13:09:46.866 logback [http-nio-9262-exec-1] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+13:09:46.866 logback [http-nio-9262-exec-1] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+13:09:46.866 logback [http-nio-9262-exec-1] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+13:09:46.866 logback [http-nio-9262-exec-1] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+13:09:46.866 logback [http-nio-9262-exec-1] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4NjMxMzg2fQ.bMHhN5K5rPZG9YJSZDiVZqzBkKm8obAziI7eSKQtkcM"]}
+13:09:46.866 logback [http-nio-9262-exec-1] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-21 23:18:46","email":"1163634611@qq.com","password":"adminadmin","phone":"15858129262","roleId":1,"roleName":"saler","userId":7,"userName":"adminadmin"},"message":"成功"}
+13:09:46.866 logback [http-nio-9262-exec-1] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+13:09:51.594 logback [http-nio-9262-exec-3] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM plan 
+13:09:51.594 logback [http-nio-9262-exec-3] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==> Parameters: 
+13:09:51.887 logback [http-nio-9262-exec-3] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - <==      Total: 1
+13:09:51.887 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.PlanMapper.select - ==>  Preparing: select id , name ,merchants from plan LIMIT ? 
+13:09:51.888 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.PlanMapper.select - ==> Parameters: 10(Integer)
+13:09:51.889 logback [http-nio-9262-exec-3] DEBUG com.bysj.auto.dao.PlanMapper.select - <==      Total: 3
+13:09:51.889 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:09:51.889 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 1(Integer)
+13:09:51.896 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 5
+13:09:51.897 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:09:51.897 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+13:09:51.899 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 3
+13:09:51.899 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:09:51.899 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+13:09:51.901 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+13:09:53.062 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr 
+13:09:53.063 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 
+13:09:53.065 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 17
+13:09:59.674 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.RecordMapper.select - ==>  Preparing: select re.id,re.userId,re.productId,re.num,re.createTime,pr.name as productName from record re join product pr on pr.id = re.productId where userId = ? 
+13:09:59.674 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.RecordMapper.select - ==> Parameters: 7(Integer)
+13:09:59.680 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.RecordMapper.select - <==      Total: 13
+13:10:01.405 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:10:01.405 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:10:01.406 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 2
+13:10:28.992 logback [http-nio-9262-exec-9] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM plan 
+13:10:28.992 logback [http-nio-9262-exec-9] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==> Parameters: 
+13:10:28.993 logback [http-nio-9262-exec-9] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - <==      Total: 1
+13:10:28.994 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.PlanMapper.select - ==>  Preparing: select id , name ,merchants from plan LIMIT ? 
+13:10:28.994 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.PlanMapper.select - ==> Parameters: 10(Integer)
+13:10:28.995 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.PlanMapper.select - <==      Total: 3
+13:10:28.996 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:10:28.996 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 1(Integer)
+13:10:28.998 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 5
+13:10:28.998 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:10:28.999 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+13:10:29.140 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 3
+13:10:29.141 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:10:29.141 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+13:10:29.142 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+13:10:32.689 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.RecordMapper.select - ==>  Preparing: select re.id,re.userId,re.productId,re.num,re.createTime,pr.name as productName from record re join product pr on pr.id = re.productId where userId = ? 
+13:10:32.689 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.RecordMapper.select - ==> Parameters: 7(Integer)
+13:10:32.692 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.RecordMapper.select - <==      Total: 13
+13:10:33.701 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:10:33.702 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:10:33.703 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 2
+13:10:45.357 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.PlanMapper.insertPlan - ==>  Preparing: INSERT INTO plan(name, merchants) VALUES (?, ?) 
+13:10:45.358 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.PlanMapper.insertPlan - ==> Parameters: 测试方案001(String), adminadmin(String)
+13:10:45.361 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.PlanMapper.insertPlan - <==    Updates: 1
+13:10:45.363 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:10:45.363 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:10:45.367 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 2
+13:10:45.369 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.RelationMapper.insert - ==>  Preparing: insert into relation(productId,planId,num) values(?,?,?) 
+13:10:45.370 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.RelationMapper.insert - ==> Parameters: 2(Integer), 4(Integer), 1(Integer)
+13:10:45.373 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.RelationMapper.insert - <==    Updates: 1
+13:10:45.373 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.RelationMapper.insert - ==>  Preparing: insert into relation(productId,planId,num) values(?,?,?) 
+13:10:45.374 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.RelationMapper.insert - ==> Parameters: 3(Integer), 4(Integer), 1(Integer)
+13:10:45.375 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.RelationMapper.insert - <==    Updates: 1
+13:10:47.174 logback [http-nio-9262-exec-5] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM plan 
+13:10:47.174 logback [http-nio-9262-exec-5] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==> Parameters: 
+13:10:47.175 logback [http-nio-9262-exec-5] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - <==      Total: 1
+13:10:47.176 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.PlanMapper.select - ==>  Preparing: select id , name ,merchants from plan LIMIT ? 
+13:10:47.176 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.PlanMapper.select - ==> Parameters: 10(Integer)
+13:10:47.178 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.PlanMapper.select - <==      Total: 4
+13:10:47.178 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:10:47.178 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 1(Integer)
+13:10:47.180 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 5
+13:10:47.180 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:10:47.181 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+13:10:47.182 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 3
+13:10:47.183 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:10:47.183 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+13:10:47.185 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+13:10:47.186 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:10:47.186 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 4(Integer)
+13:10:47.188 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+13:10:56.239 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.RecordMapper.select - ==>  Preparing: select re.id,re.userId,re.productId,re.num,re.createTime,pr.name as productName from record re join product pr on pr.id = re.productId where userId = ? 
+13:10:56.239 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.RecordMapper.select - ==> Parameters: 7(Integer)
+13:10:56.241 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.RecordMapper.select - <==      Total: 13
+13:10:57.292 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:10:57.293 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:10:57.294 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 2
+13:11:01.335 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:11:01.335 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:11:01.336 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 2
+13:11:01.339 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:11:01.339 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:11:01.340 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 2
+13:11:01.570 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:11:01.570 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:11:01.571 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 2
+13:11:01.581 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.update - ==>  Preparing: UPDATE `auto`.`product` SET `name` = ?,`price` = ?,`stock` = ?,`img` = ? WHERE `id` = ? 
+13:11:01.582 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.update - ==> Parameters: 下料装置1(String), 2999.0(Double), 89(Integer), 65e39beaf1b8402cb6995dd7d6cda5d0.png(String), 38(Integer)
+13:11:01.595 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.update - <==    Updates: 0
+13:11:01.611 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.RecordMapper.insert - ==>  Preparing: INSERT INTO `auto`.`record`(`userId`, `productId`, `num`) VALUES (?, ?, ?) 
+13:11:01.612 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.RecordMapper.insert - ==> Parameters: 7(Integer), 2(Integer), 1(Integer)
+13:11:01.677 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.RecordMapper.insert - <==    Updates: 1
+13:11:01.678 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.delete - ==>  Preparing: DELETE FROM `auto`.`cart` WHERE `id` = ? 
+13:11:01.678 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.delete - ==> Parameters: 38(Integer)
+13:11:01.787 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.delete - <==    Updates: 1
+13:11:01.788 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.update - ==>  Preparing: UPDATE `auto`.`product` SET `name` = ?,`price` = ?,`stock` = ?,`img` = ? WHERE `id` = ? 
+13:11:01.788 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.update - ==> Parameters: 储料装置1(String), 3999.0(Double), 99(Integer), fcf700c803fb0f1a.png(String), 39(Integer)
+13:11:01.789 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.update - <==    Updates: 0
+13:11:01.789 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.RecordMapper.insert - ==>  Preparing: INSERT INTO `auto`.`record`(`userId`, `productId`, `num`) VALUES (?, ?, ?) 
+13:11:01.789 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.RecordMapper.insert - ==> Parameters: 7(Integer), 3(Integer), 1(Integer)
+13:11:01.891 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.RecordMapper.insert - <==    Updates: 1
+13:11:01.892 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.delete - ==>  Preparing: DELETE FROM `auto`.`cart` WHERE `id` = ? 
+13:11:01.892 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.delete - ==> Parameters: 39(Integer)
+13:11:01.988 logback [http-nio-9262-exec-2] DEBUG com.bysj.auto.dao.CartMapper.delete - <==    Updates: 1
+13:11:02.054 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:11:02.055 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:11:02.056 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 0
+13:11:17.831 logback [http-nio-9262-exec-5] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM plan 
+13:11:17.831 logback [http-nio-9262-exec-5] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==> Parameters: 
+13:11:17.832 logback [http-nio-9262-exec-5] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - <==      Total: 1
+13:11:17.832 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.PlanMapper.select - ==>  Preparing: select id , name ,merchants from plan LIMIT ? 
+13:11:17.833 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.PlanMapper.select - ==> Parameters: 10(Integer)
+13:11:17.834 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.PlanMapper.select - <==      Total: 4
+13:11:17.834 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:11:17.834 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 1(Integer)
+13:11:17.836 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 5
+13:11:17.836 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:11:17.837 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+13:11:17.838 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 3
+13:11:17.839 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:11:17.839 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+13:11:17.840 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+13:11:17.840 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:11:17.841 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 4(Integer)
+13:11:17.842 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+13:11:18.916 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr 
+13:11:18.916 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 
+13:11:18.918 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 17
+13:11:22.618 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr WHERE (id=?) 
+13:11:22.619 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 18(Integer)
+13:11:22.620 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 1
+13:11:23.530 logback [http-nio-9262-exec-10] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==>  Preparing: select id,userId,productId,num from cart where userId = ? AND productId = ? 
+13:11:23.530 logback [http-nio-9262-exec-10] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==> Parameters: 7(Integer), 18(Integer)
+13:11:23.531 logback [http-nio-9262-exec-10] DEBUG c.b.a.d.C.selectByUserIdAndProductId - <==      Total: 0
+13:11:23.533 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.CartMapper.insert - ==>  Preparing: INSERT INTO cart (userId,productId,num) VALUES (?,?,?) 
+13:11:23.533 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.CartMapper.insert - ==> Parameters: 7(Integer), 18(Integer), 1(Integer)
+13:11:23.681 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.CartMapper.insert - <==    Updates: 1
+13:11:25.204 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:11:25.204 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:11:25.205 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 1
+13:11:27.834 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:11:27.834 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:11:27.835 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 1
+13:11:27.836 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:11:27.836 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:11:27.837 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 1
+13:11:27.860 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:11:27.860 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:11:27.862 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 1
+13:11:27.862 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.update - ==>  Preparing: UPDATE `auto`.`product` SET `name` = ?,`price` = ?,`stock` = ?,`img` = ? WHERE `id` = ? 
+13:11:27.862 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.update - ==> Parameters: 上料装置2(String), 3888.8(Double), 19(Integer), fcf700c803fb0f1a.png(String), 40(Integer)
+13:11:27.863 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.update - <==    Updates: 0
+13:11:27.864 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.RecordMapper.insert - ==>  Preparing: INSERT INTO `auto`.`record`(`userId`, `productId`, `num`) VALUES (?, ?, ?) 
+13:11:27.864 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.RecordMapper.insert - ==> Parameters: 7(Integer), 18(Integer), 1(Integer)
+13:11:28.019 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.RecordMapper.insert - <==    Updates: 1
+13:11:28.019 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.delete - ==>  Preparing: DELETE FROM `auto`.`cart` WHERE `id` = ? 
+13:11:28.019 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.delete - ==> Parameters: 40(Integer)
+13:11:28.093 logback [http-nio-9262-exec-5] DEBUG com.bysj.auto.dao.CartMapper.delete - <==    Updates: 1
+13:11:28.172 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:11:28.173 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:11:28.173 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 0
+13:12:51.841 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.RecordMapper.select - ==>  Preparing: select re.id,re.userId,re.productId,re.num,re.createTime,pr.name as productName from record re join product pr on pr.id = re.productId where userId = ? 
+13:12:51.841 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.RecordMapper.select - ==> Parameters: 7(Integer)
+13:12:51.843 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.RecordMapper.select - <==      Total: 16
+13:12:53.094 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:12:53.094 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:12:53.095 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 0
+13:13:48.565 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.RecordMapper.select - ==>  Preparing: select re.id,re.userId,re.productId,re.num,re.createTime,pr.name as productName from record re join product pr on pr.id = re.productId where userId = ? 
+13:13:48.565 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.RecordMapper.select - ==> Parameters: 7(Integer)
+13:13:48.568 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.RecordMapper.select - <==      Total: 16
+13:13:49.461 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:13:49.462 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:13:49.462 logback [http-nio-9262-exec-1] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 0
+13:13:51.169 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr 
+13:13:51.169 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 
+13:13:51.171 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 17
+13:13:52.365 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr WHERE (id=?) 
+13:13:52.365 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+13:13:52.366 logback [http-nio-9262-exec-4] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 1
+13:13:54.779 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr WHERE (id=?) 
+13:13:54.779 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+13:13:54.780 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 1
+13:13:56.536 logback [http-nio-9262-exec-7] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==>  Preparing: select id,userId,productId,num from cart where userId = ? AND productId = ? 
+13:13:56.536 logback [http-nio-9262-exec-7] DEBUG c.b.a.d.C.selectByUserIdAndProductId - ==> Parameters: 7(Integer), 2(Integer)
+13:13:56.537 logback [http-nio-9262-exec-7] DEBUG c.b.a.d.C.selectByUserIdAndProductId - <==      Total: 0
+13:13:56.537 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.CartMapper.insert - ==>  Preparing: INSERT INTO cart (userId,productId,num) VALUES (?,?,?) 
+13:13:56.537 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.CartMapper.insert - ==> Parameters: 7(Integer), 2(Integer), 1(Integer)
+13:13:56.705 logback [http-nio-9262-exec-7] DEBUG com.bysj.auto.dao.CartMapper.insert - <==    Updates: 1
+13:13:57.687 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:13:57.687 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:13:57.688 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 1
+13:14:03.098 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:14:03.098 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:14:03.099 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 1
+13:14:03.101 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:14:03.101 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:14:03.102 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 1
+13:14:03.125 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:14:03.125 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:14:03.127 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 1
+13:14:03.127 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.update - ==>  Preparing: UPDATE `auto`.`product` SET `name` = ?,`price` = ?,`stock` = ?,`img` = ? WHERE `id` = ? 
+13:14:03.127 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.update - ==> Parameters: 下料装置1(String), 2999.0(Double), 89(Integer), 65e39beaf1b8402cb6995dd7d6cda5d0.png(String), 41(Integer)
+13:14:03.128 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.ProductMapper.update - <==    Updates: 0
+13:14:03.128 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.RecordMapper.insert - ==>  Preparing: INSERT INTO `auto`.`record`(`userId`, `productId`, `num`) VALUES (?, ?, ?) 
+13:14:03.128 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.RecordMapper.insert - ==> Parameters: 7(Integer), 2(Integer), 1(Integer)
+13:14:03.279 logback [http-nio-9262-exec-9] DEBUG c.bysj.auto.dao.RecordMapper.insert - <==    Updates: 1
+13:14:03.279 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.delete - ==>  Preparing: DELETE FROM `auto`.`cart` WHERE `id` = ? 
+13:14:03.279 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.delete - ==> Parameters: 41(Integer)
+13:14:03.365 logback [http-nio-9262-exec-9] DEBUG com.bysj.auto.dao.CartMapper.delete - <==    Updates: 1
+13:14:03.397 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.CartMapper.select - ==>  Preparing: select ca.id,ca.userId,ca.productId,ca.num ,pr.name as productName ,pr.type as productType ,pr.merchants as productMerchants, pr.price as productPrice , pr.stock as productStock ,pr.img as productImg from cart ca join product pr on pr.id = ca.productId where userId = ? 
+13:14:03.397 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.CartMapper.select - ==> Parameters: 7(Integer)
+13:14:03.399 logback [http-nio-9262-exec-10] DEBUG com.bysj.auto.dao.CartMapper.select - <==      Total: 0
+13:14:15.959 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.RecordMapper.select - ==>  Preparing: select re.id,re.userId,re.productId,re.num,re.createTime,pr.name as productName from record re join product pr on pr.id = re.productId where userId = ? 
+13:14:15.959 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.RecordMapper.select - ==> Parameters: 7(Integer)
+13:14:15.961 logback [http-nio-9262-exec-2] DEBUG c.bysj.auto.dao.RecordMapper.select - <==      Total: 17
+13:14:28.898 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - >>>===============================================
+13:14:28.899 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - METHOD : getUser
+13:14:28.899 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - FROM : 0:0:0:0:0:0:0:1
+13:14:28.899 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - URL : http://localhost:9262/user
+13:14:28.899 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - Params : {"userId":["7"]}
+13:14:28.900 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.UserMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM tb_user u INNER JOIN tb_user_role r ON u.roleId = r.roleId WHERE (u.userId = ?) 
+13:14:28.900 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.UserMapper.select_COUNT - ==> Parameters: 7(Integer)
+13:14:28.901 logback [http-nio-9262-exec-4] DEBUG c.b.auto.dao.UserMapper.select_COUNT - <==      Total: 1
+13:14:28.902 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.UserMapper.select - ==>  Preparing: SELECT u.userId , u.userName , u.password , u.phone , u.createTime , u.email , r.roleId , r.roleName FROM tb_user u INNER JOIN tb_user_role r on u.roleId = r.roleId WHERE (u.userId = ?) LIMIT ? 
+13:14:28.902 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.UserMapper.select - ==> Parameters: 7(Integer), 10(Integer)
+13:14:28.903 logback [http-nio-9262-exec-4] DEBUG com.bysj.auto.dao.UserMapper.select - <==      Total: 1
+13:14:28.903 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - response : {"list":[{"admin":false,"createTime":"2019-05-21 23:18:46","email":"1163634611@qq.com","password":"adminadmin","phone":"15858129262","roleId":1,"roleName":"saler","userId":7,"userName":"adminadmin"}],"page":1,"size":1,"total":1}
+13:14:28.903 logback [http-nio-9262-exec-4] INFO  c.b.auto.controller.UserController - <<<===============================================
+13:14:50.720 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr 
+13:14:50.720 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 
+13:14:50.724 logback [http-nio-9262-exec-7] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 17
+13:14:55.490 logback [http-nio-9262-exec-6] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM plan 
+13:14:55.490 logback [http-nio-9262-exec-6] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==> Parameters: 
+13:14:55.494 logback [http-nio-9262-exec-6] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - <==      Total: 1
+13:14:55.495 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.PlanMapper.select - ==>  Preparing: select id , name ,merchants from plan LIMIT ? 
+13:14:55.495 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.PlanMapper.select - ==> Parameters: 10(Integer)
+13:14:55.497 logback [http-nio-9262-exec-6] DEBUG com.bysj.auto.dao.PlanMapper.select - <==      Total: 4
+13:14:55.497 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:14:55.497 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 1(Integer)
+13:14:55.499 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 5
+13:14:55.500 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:14:55.500 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+13:14:55.502 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 3
+13:14:55.502 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:14:55.502 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+13:14:55.504 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+13:14:55.504 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:14:55.504 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 4(Integer)
+13:14:55.505 logback [http-nio-9262-exec-6] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+13:15:31.454 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr 
+13:15:31.454 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 
+13:15:31.456 logback [http-nio-9262-exec-10] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 17
+13:15:34.779 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr WHERE (type=?) 
+13:15:34.779 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 下料装置(String)
+13:15:34.780 logback [http-nio-9262-exec-1] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 5
+13:15:42.205 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr WHERE (type=?) 
+13:15:42.205 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 上料装置(String)
+13:15:42.206 logback [http-nio-9262-exec-3] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+13:30:41.014 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img FROM product pr 
+13:30:41.014 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 
+13:30:41.017 logback [http-nio-9262-exec-5] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 17
+13:31:39.813 logback [http-nio-9262-exec-8] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==>  Preparing: SELECT count(0) FROM plan 
+13:31:39.814 logback [http-nio-9262-exec-8] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - ==> Parameters: 
+13:31:39.815 logback [http-nio-9262-exec-8] DEBUG c.b.auto.dao.PlanMapper.select_COUNT - <==      Total: 1
+13:31:39.817 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.PlanMapper.select - ==>  Preparing: select id , name ,merchants from plan LIMIT ? 
+13:31:39.817 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.PlanMapper.select - ==> Parameters: 10(Integer)
+13:31:39.819 logback [http-nio-9262-exec-8] DEBUG com.bysj.auto.dao.PlanMapper.select - <==      Total: 4
+13:31:39.819 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:31:39.820 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 1(Integer)
+13:31:39.822 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 5
+13:31:39.822 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:31:39.823 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 2(Integer)
+13:31:39.824 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 3
+13:31:39.825 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:31:39.826 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 3(Integer)
+13:31:39.827 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2
+13:31:39.828 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==>  Preparing: SELECT pr.id,pr.name,pr.price,pr.merchants,pr.type,pr.stock,pr.img , re.num as num FROM product pr INNER JOIN relation re on pr.id = re.productId INNER JOIN plan pl on pl.id = re.planId WHERE (pl.id = ?) 
+13:31:39.828 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - ==> Parameters: 4(Integer)
+13:31:39.830 logback [http-nio-9262-exec-8] DEBUG c.bysj.auto.dao.ProductMapper.select - <==      Total: 2

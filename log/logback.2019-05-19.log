@@ -1,0 +1,184 @@
+14:52:08.860 logback [main] INFO  com.bysj.auto.AutoApplication - Starting AutoApplication on DESKTOP-V9ROAHN with PID 29940 (H:\project\lxy\target\classes started by hys_m in H:\project\lxy)
+14:52:08.865 logback [main] INFO  com.bysj.auto.AutoApplication - No active profile set, falling back to default profiles: default
+14:52:11.931 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9262 (http)
+14:52:11.948 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9262"]
+14:52:11.958 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:52:11.959 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+14:52:12.117 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:52:12.118 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3145 ms
+14:52:13.375 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9262"]
+14:52:13.414 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9262 (http) with context path ''
+14:52:13.422 logback [main] INFO  com.bysj.auto.AutoApplication - Started AutoApplication in 5.987 seconds (JVM running for 8.837)
+14:53:52.457 logback [http-nio-9262-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:53:52.457 logback [http-nio-9262-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:53:52.473 logback [http-nio-9262-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+14:53:52.669 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - >>>===============================================
+14:53:52.669 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - METHOD : login
+14:53:52.749 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+14:53:52.750 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+14:53:52.875 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - Params : {}
+14:53:53.238 logback [http-nio-9262-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:54:01.529 logback [http-nio-9262-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:54:11.714 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - response : {"code":2000,"data":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4Mzc4NDUxfQ.M8u277SUVwMcPWFoVA747Uy2jPQT1ApHAocM_UliEww","message":"成功"}
+14:54:11.714 logback [http-nio-9262-exec-1] INFO  c.b.auto.controller.LoginController - <<<===============================================
+14:54:11.971 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+14:54:11.972 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+14:54:11.972 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+14:54:11.972 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+14:54:11.975 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4Mzc4NDUxfQ.M8u277SUVwMcPWFoVA747Uy2jPQT1ApHAocM_UliEww"]}
+14:54:11.993 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-04 16:39:24","email":"1435684870@qq.com","password":"admin","phone":"15382559719","roleId":1,"roleName":"saler","userId":7,"userName":"admin"},"message":"成功"}
+14:54:11.994 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+14:54:13.196 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+14:54:13.197 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+14:54:13.197 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+14:54:13.197 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+14:54:13.198 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4Mzc4NDUxfQ.M8u277SUVwMcPWFoVA747Uy2jPQT1ApHAocM_UliEww"]}
+14:54:13.198 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-04 16:39:24","email":"1435684870@qq.com","password":"admin","phone":"15382559719","roleId":1,"roleName":"saler","userId":7,"userName":"admin"},"message":"成功"}
+14:54:13.198 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+15:04:52.166 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+15:04:52.166 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+15:04:52.166 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+15:04:52.166 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+15:04:52.167 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4Mzc4NDUxfQ.M8u277SUVwMcPWFoVA747Uy2jPQT1ApHAocM_UliEww"]}
+15:04:52.167 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-04 16:39:24","email":"1435684870@qq.com","password":"admin","phone":"15382559719","roleId":1,"roleName":"saler","userId":7,"userName":"admin"},"message":"成功"}
+15:04:52.167 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+15:29:03.617 logback [http-nio-9262-exec-1] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+15:29:03.618 logback [http-nio-9262-exec-1] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+15:29:03.618 logback [http-nio-9262-exec-1] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+15:29:03.618 logback [http-nio-9262-exec-1] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+15:29:03.618 logback [http-nio-9262-exec-1] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4Mzc4NDUxfQ.M8u277SUVwMcPWFoVA747Uy2jPQT1ApHAocM_UliEww"]}
+15:29:03.618 logback [http-nio-9262-exec-1] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-04 16:39:24","email":"1435684870@qq.com","password":"admin","phone":"15382559719","roleId":1,"roleName":"saler","userId":7,"userName":"admin"},"message":"成功"}
+15:29:03.618 logback [http-nio-9262-exec-1] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+15:29:20.926 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+15:29:20.927 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+15:29:20.945 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+15:29:20.945 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+15:29:20.946 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4Mzc4NDUxfQ.M8u277SUVwMcPWFoVA747Uy2jPQT1ApHAocM_UliEww"]}
+15:29:20.946 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-04 16:39:24","email":"1435684870@qq.com","password":"admin","phone":"15382559719","roleId":1,"roleName":"saler","userId":7,"userName":"admin"},"message":"成功"}
+15:29:20.946 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+15:29:53.207 logback [http-nio-9262-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
+15:30:16.869 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+15:30:16.869 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+15:30:16.870 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+15:30:16.870 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+15:30:16.871 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4Mzc4NDUxfQ.M8u277SUVwMcPWFoVA747Uy2jPQT1ApHAocM_UliEww"]}
+15:30:16.872 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-04 16:39:24","email":"1435684870@qq.com","password":"admin","phone":"15382559719","roleId":1,"roleName":"saler","userId":7,"userName":"admin"},"message":"成功"}
+15:30:16.872 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+15:30:24.128 logback [http-nio-9262-exec-4] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
+15:30:48.531 logback [http-nio-9262-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+15:31:10.421 logback [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:31:10.547 logback [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:31:24.707 logback [main] INFO  com.bysj.auto.AutoApplication - Starting AutoApplication on DESKTOP-V9ROAHN with PID 34224 (H:\project\lxy\target\classes started by hys_m in H:\project\lxy)
+15:31:24.717 logback [main] INFO  com.bysj.auto.AutoApplication - No active profile set, falling back to default profiles: default
+15:31:27.438 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9262 (http)
+15:31:27.454 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9262"]
+15:31:27.465 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:31:27.465 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+15:31:27.620 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:31:27.621 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2784 ms
+15:31:28.841 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9262"]
+15:31:28.873 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9262 (http) with context path ''
+15:31:28.894 logback [main] INFO  com.bysj.auto.AutoApplication - Started AutoApplication in 5.268 seconds (JVM running for 7.13)
+15:31:34.536 logback [http-nio-9262-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:31:34.537 logback [http-nio-9262-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:31:34.561 logback [http-nio-9262-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 24 ms
+15:31:34.690 logback [http-nio-9262-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'name' is not present]
+15:33:55.665 logback [main] INFO  com.bysj.auto.AutoApplication - Starting AutoApplication on DESKTOP-V9ROAHN with PID 34780 (H:\project\lxy\target\classes started by hys_m in H:\project\lxy)
+15:33:55.670 logback [main] INFO  com.bysj.auto.AutoApplication - No active profile set, falling back to default profiles: default
+15:34:01.319 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9262 (http)
+15:34:01.349 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9262"]
+15:34:01.364 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:34:01.364 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+15:34:01.566 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:34:01.566 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5804 ms
+15:34:03.356 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9262"]
+15:34:03.403 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9262 (http) with context path ''
+15:34:03.407 logback [main] INFO  com.bysj.auto.AutoApplication - Started AutoApplication in 9.072 seconds (JVM running for 11.831)
+15:34:12.236 logback [http-nio-9262-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:34:12.236 logback [http-nio-9262-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:34:12.278 logback [http-nio-9262-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 42 ms
+15:34:12.583 logback [http-nio-9262-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:34:13.548 logback [http-nio-9262-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:35:12.148 logback [http-nio-9262-exec-9] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+15:35:12.148 logback [http-nio-9262-exec-9] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+15:35:12.167 logback [http-nio-9262-exec-9] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+15:35:12.168 logback [http-nio-9262-exec-9] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+15:35:12.333 logback [http-nio-9262-exec-9] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4Mzc4NDUxfQ.M8u277SUVwMcPWFoVA747Uy2jPQT1ApHAocM_UliEww"]}
+15:35:12.546 logback [http-nio-9262-exec-9] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-04 16:39:24","email":"1435684870@qq.com","password":"admin","phone":"15382559719","roleId":1,"roleName":"saler","userId":7,"userName":"admin"},"message":"成功"}
+15:35:12.546 logback [http-nio-9262-exec-9] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+15:35:40.539 logback [http-nio-9262-exec-3] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+15:35:40.540 logback [http-nio-9262-exec-3] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+15:35:40.540 logback [http-nio-9262-exec-3] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+15:35:40.540 logback [http-nio-9262-exec-3] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+15:35:40.541 logback [http-nio-9262-exec-3] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4Mzc4NDUxfQ.M8u277SUVwMcPWFoVA747Uy2jPQT1ApHAocM_UliEww"]}
+15:35:40.542 logback [http-nio-9262-exec-3] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-04 16:39:24","email":"1435684870@qq.com","password":"admin","phone":"15382559719","roleId":1,"roleName":"saler","userId":7,"userName":"admin"},"message":"成功"}
+15:35:40.542 logback [http-nio-9262-exec-3] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+15:35:44.947 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+15:35:44.947 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+15:35:44.947 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+15:35:44.948 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+15:35:44.948 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4Mzc4NDUxfQ.M8u277SUVwMcPWFoVA747Uy2jPQT1ApHAocM_UliEww"]}
+15:35:44.948 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-04 16:39:24","email":"1435684870@qq.com","password":"admin","phone":"15382559719","roleId":1,"roleName":"saler","userId":7,"userName":"admin"},"message":"成功"}
+15:35:44.948 logback [http-nio-9262-exec-4] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+15:41:03.671 logback [http-nio-9262-exec-5] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+15:41:03.671 logback [http-nio-9262-exec-5] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+15:41:03.671 logback [http-nio-9262-exec-5] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+15:41:03.671 logback [http-nio-9262-exec-5] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+15:41:03.671 logback [http-nio-9262-exec-5] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4Mzc4NDUxfQ.M8u277SUVwMcPWFoVA747Uy2jPQT1ApHAocM_UliEww"]}
+15:41:03.671 logback [http-nio-9262-exec-5] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-04 16:39:24","email":"1435684870@qq.com","password":"admin","phone":"15382559719","roleId":1,"roleName":"saler","userId":7,"userName":"admin"},"message":"成功"}
+15:41:03.671 logback [http-nio-9262-exec-5] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+15:42:14.355 logback [http-nio-9262-exec-9] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+15:42:14.356 logback [http-nio-9262-exec-9] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+15:42:14.356 logback [http-nio-9262-exec-9] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+15:42:14.356 logback [http-nio-9262-exec-9] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+15:42:14.356 logback [http-nio-9262-exec-9] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4Mzc4NDUxfQ.M8u277SUVwMcPWFoVA747Uy2jPQT1ApHAocM_UliEww"]}
+15:42:14.356 logback [http-nio-9262-exec-9] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-04 16:39:24","email":"1435684870@qq.com","password":"admin","phone":"15382559719","roleId":1,"roleName":"saler","userId":7,"userName":"admin"},"message":"成功"}
+15:42:14.356 logback [http-nio-9262-exec-9] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+15:43:22.555 logback [Thread-20] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:43:22.610 logback [Thread-20] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:43:33.738 logback [main] INFO  com.bysj.auto.AutoApplication - Starting AutoApplication on DESKTOP-V9ROAHN with PID 10028 (H:\project\lxy\target\classes started by hys_m in H:\project\lxy)
+15:43:33.743 logback [main] INFO  com.bysj.auto.AutoApplication - No active profile set, falling back to default profiles: default
+15:43:36.065 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9262 (http)
+15:43:36.083 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9262"]
+15:43:36.092 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:43:36.093 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+15:43:36.250 logback [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:43:36.251 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2329 ms
+15:43:37.404 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9262"]
+15:43:37.456 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9262 (http) with context path ''
+15:43:37.462 logback [main] INFO  com.bysj.auto.AutoApplication - Started AutoApplication in 5.143 seconds (JVM running for 7.523)
+15:43:44.277 logback [http-nio-9262-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:43:44.278 logback [http-nio-9262-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:43:44.305 logback [http-nio-9262-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 27 ms
+15:43:45.061 logback [http-nio-9262-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:43:45.521 logback [http-nio-9262-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:43:45.669 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+15:43:45.670 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+15:43:45.671 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+15:43:45.672 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+15:43:45.764 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4Mzc4NDUxfQ.M8u277SUVwMcPWFoVA747Uy2jPQT1ApHAocM_UliEww"]}
+15:43:45.836 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-04 16:39:24","email":"1435684870@qq.com","password":"admin","phone":"15382559719","roleId":1,"roleName":"saler","userId":7,"userName":"admin"},"message":"成功"}
+15:43:45.836 logback [http-nio-9262-exec-2] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+16:40:16.212 logback [http-nio-9262-exec-3] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+16:40:16.214 logback [http-nio-9262-exec-3] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+16:40:16.215 logback [http-nio-9262-exec-3] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+16:40:16.215 logback [http-nio-9262-exec-3] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+16:40:16.217 logback [http-nio-9262-exec-3] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4Mzc4NDUxfQ.M8u277SUVwMcPWFoVA747Uy2jPQT1ApHAocM_UliEww"]}
+16:40:16.219 logback [http-nio-9262-exec-3] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-04 16:39:24","email":"1435684870@qq.com","password":"admin","phone":"15382559719","roleId":1,"roleName":"saler","userId":7,"userName":"admin"},"message":"成功"}
+16:40:16.220 logback [http-nio-9262-exec-3] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+16:52:00.633 logback [http-nio-9262-exec-10] INFO  c.b.auto.controller.LoginController - >>>===============================================
+16:52:00.634 logback [http-nio-9262-exec-10] INFO  c.b.auto.controller.LoginController - METHOD : login
+16:52:00.634 logback [http-nio-9262-exec-10] INFO  c.b.auto.controller.LoginController - FROM : 0:0:0:0:0:0:0:1
+16:52:00.634 logback [http-nio-9262-exec-10] INFO  c.b.auto.controller.LoginController - URL : http://localhost:9262/auth
+16:52:00.634 logback [http-nio-9262-exec-10] INFO  c.b.auto.controller.LoginController - Params : {}
+16:52:01.601 logback [http-nio-9262-exec-10] INFO  c.b.auto.controller.LoginController - response : {"code":2000,"data":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4Mzg1NTIxfQ.b9mpeWmNaI1vptYrNZ9U0Hfxn9bNibI3WmVx1WivTAA","message":"成功"}
+16:52:01.601 logback [http-nio-9262-exec-10] INFO  c.b.auto.controller.LoginController - <<<===============================================
+16:52:01.648 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - >>>===============================================
+16:52:01.648 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - METHOD : getUserInfo
+16:52:01.648 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - FROM : 0:0:0:0:0:0:0:1
+16:52:01.648 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - URL : http://localhost:9262/userInfo
+16:52:01.648 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - Params : {"token":["eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyIiwiaWQiOiI3IiwiZXhwIjoxNTU4Mzg1NTIxfQ.b9mpeWmNaI1vptYrNZ9U0Hfxn9bNibI3WmVx1WivTAA"]}
+16:52:01.649 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - response : {"code":2000,"data":{"admin":false,"createTime":"2019-05-19 16:51:04","email":"1435684870@qq.com","password":"adminadmin","phone":"15382559719","roleId":1,"roleName":"saler","userId":7,"userName":"adminadmin"},"message":"成功"}
+16:52:01.649 logback [http-nio-9262-exec-6] INFO  c.b.a.controller.UserInfoController - <<<===============================================
+17:01:53.932 logback [Thread-13] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+17:01:54.110 logback [Thread-13] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
